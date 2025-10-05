@@ -1,0 +1,116 @@
+/* Page background */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5; /* light neutral background */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form box */
+form {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid #ddd;
+}
+
+/* Title */
+h2 {
+  color: #1877f2; /* classic Facebook blue */
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Input fields */
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input box style */
+input {
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccd0d5;
+  border-radius: 6px;
+  background-color: #f5f6f7;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  background-color: #fff;
+  border-color: #1877f2;
+  outline: none;
+}
+
+/* Login button */
+button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #166fe5;
+}
+
+/* Subtle text or footer */
+.container p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* Register link below the form */
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.register-link span a {
+  color: #1877f2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link span a:hover {
+  text-decoration: underline;
+}

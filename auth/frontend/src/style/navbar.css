@@ -1,0 +1,131 @@
+.navbar {
+  background: linear-gradient(to bottom, #3b5998 0%, #5b7bb8 100%);
+  border-bottom: 2px solid #29487d;
+  font-family: Arial, sans-serif;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* ✅ CHANGED: Makes both sides same height */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 20px; /* ✅ ADDED: Space between left and right */
+}
+
+/* Left side - Image/Logo */
+.navbar-left {
+  display: flex;
+  align-items: stretch; /* ✅ ADDED: Stretch to full height */
+}
+
+.img {
+  width: 80px;
+  height: auto; /* ✅ CHANGED: from fixed 80px to auto */
+  min-height: 100%; /* ✅ ADDED: Takes full height of parent */
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+/* Right side - Title and Links */
+.navbar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: space-between; /* ✅ ADDED: Spreads logo and links */
+  flex: 1; /* ✅ ADDED: Takes remaining space */
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 0; /* ✅ CHANGED: removed fixed margin */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 5px 0; /* ✅ ADDED: Small padding */
+}
+
+.logo .bracket {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+.logo .slash {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start; 
+  justify-items: flex-start;
+  margin-top: 0; /* ✅ CHANGED: removed fixed margin */
+}
+
+.nav-links a,
+.nav-links .nav-button { /* ✅ ADDED: Style logout button same as links */
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  padding: 5px 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer; /* ✅ ADDED: for button */
+  font-family: Arial, sans-serif; /* ✅ ADDED: for button */
+}
+
+.nav-links a:hover,
+.nav-links .nav-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar-left {
+    margin-bottom: 0; /* ✅ CHANGED: gap handles spacing */
+  }
+
+  .img {
+    width: 60px; /* ✅ CHANGED: Smaller on mobile */
+    min-height: 60px; /* ✅ ADDED: Fixed size on mobile */
+  }
+
+  .navbar-right {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* ✅ ADDED: Wrap on very small screens */
+  }
+}
